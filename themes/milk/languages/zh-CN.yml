@@ -1,0 +1,17 @@
+more: 继续阅读
+
+title:
+  archives: 归档
+  categories: 分类
+  tags: 标签
+  home: 首页
+  more: 更多
+
+sidebar:
+  social: 社交网络
+  toc: 目录
+  links: 友情链接
+
+footer:
+  powered: "由 %s 强力驱动"
+  theme: 主题

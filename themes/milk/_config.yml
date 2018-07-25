@@ -1,0 +1,55 @@
+favicon: /favicon.ico
+
+post:
+  append:
+    <blockquote class="top-gap-big">
+      <p>
+        本文遵循 <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" class"text-muted">CC BY-ND-ND 3.0</a> 协议，转载请注明原作者，禁止商用，禁止演绎。
+      </p>
+    </blockquote>
+
+menu:
+  - url: /archives
+    icon: czs-folder-l
+    title: 归档
+  - url: /categories
+    icon: czs-bookmark-l
+    title: 分类
+  - url: /tags
+    icon: czs-tag-l
+    title: 标签
+  - placeholder: true
+  - url: http://malu.moe
+    icon: czs-user-l
+    title: 关于我
+
+sidebar:
+  title: true
+  subtitle: true
+  description: false
+  avatar: /assets/about/xcatliu_512.png
+  welcome: 欢迎访问Malusama的博客，这里搜集了我的技术文章和生活感悟，希望能够与您一起交流，共同成长。
+  social:
+    - url: https://github.com/malusama
+      icon: czs-github
+      title: GitHub
+    - url: https://www.v2ex.com/member/malusama
+      icon: czs-v2ex
+      title: V2EX
+    - url: https://twitter.com/791644947
+      icon: czs-twitter
+      title: Twitter
+    - url: mailto:chensichengmalu@gmail.com
+      icon: czs-message-l
+      title: Gmail
+  links:
+    github: https://github.com/malusama
+
+
+disqus_shortname: malusama
+
+# Google Analytics
+google_analytics: UA-28923877-1
+# Baidu Analytics
+baidu_analytics: 196bdd0c9837159f8e291ef5a93aef95
+since: 2012
