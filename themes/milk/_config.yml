@@ -27,7 +27,7 @@ sidebar:
   title: true
   subtitle: true
   description: false
-  avatar: /assets/about/xcatliu_512.png
+  avatar: /assets/about/favicon.ico
   welcome: 欢迎访问Malusama的博客，这里搜集了我的技术文章和生活感悟，希望能够与您一起交流，共同成长。
   social:
     - url: https://github.com/malusama

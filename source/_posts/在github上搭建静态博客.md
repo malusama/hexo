@@ -10,7 +10,7 @@ tags: 英才工程
 
 ​	首先你得注册一个 github 的帐号，这里默认你已经有github账号了。然后申请一个名字为 user.github.io （user为你的用户名）的仓库，访问 user.github.io 会默认解析你master分支下的index.html页面。
 
-{% asset_img 主页.png 仓库申请页面 %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/%E4%B8%BB%E9%A1%B5.png?x-oss-process=style/blog)
 
 ​	安装 hexo， hexo 是用node编写的，所以你得安装node环境。
 
@@ -33,7 +33,7 @@ npm install hexo-cli -g
 
 然后你将会看到:
 
-{% asset_img npm-install-hexo-cli.png npm-install-hexo-cli %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/npm-install-hexo-cli.png?x-oss-process=style/blog)
 
 可能你会看到一个`WARN`，但是不用担心，这不会影响你的正常使用。 然后输入
 
@@ -51,7 +51,7 @@ hexo -v
 
 如果你看到了如图文字，则说明已经安装成功了。
 
-{% asset_img hexo-v.png hexo-v %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/hexo-v.png?x-oss-process=style/blog)
 
 ## 初始化Hexo
 
@@ -95,7 +95,7 @@ INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
 
 在浏览器中打开`http://localhost:4000/`，你将会看到：
 
-{% asset_img hexo-first-time.png hexo-first-time %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/hexo-first-time.png?x-oss-process=style/blog)
 
 到目前为止，Hexo在本地的配置已经全都结束了。
 
@@ -256,5 +256,5 @@ theme: landscape //themes文件夹中对应文件夹的名称
 
 这里我是从是主机壳买的域名，主要这里卖moe的域名而已。在域名DNS解析管理里把CNAME类型的解析值映射到你的GitHub.io就行。
 
-{% asset_img DNS解析.png DNS解析 %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/DNS%E8%A7%A3%E6%9E%90.png?x-oss-process=style/blog)
 

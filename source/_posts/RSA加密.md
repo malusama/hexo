@@ -4,7 +4,9 @@ date: 2017-10-17 18:18:55
 tags: java RSA
 ---
 2017年五月13日早些时候群里就流传了一些学校机房里的机器中了一种蠕虫病毒的图，那时候都是怀着一种调侃的心情看这些图，因为机房没法使用我们学生们就不用上一些实习了233。
-{% asset_img 界面.jpg WannaCry界面 %}
+
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/%E7%95%8C%E9%9D%A2.jpg?x-oss-process=style/blog)
+
 比这的更早些时候也有一些勒索程序，windows平台下的，也有[Android](https://www.android.com/)平台下的。不过他们更像是一些脚本小子是使用出售的模版改些东西就传播的东西，因为当时确实也因为各种勒索软件爆发论坛上有一些抱怨，互联网更深的地方还有人出售易语言勒索程序的模版。但是五月13日后画风就越来越不一样了。先是群里这种机房被感染的图片越来越多，它不是单独的一个勒索软件，他还是一个蠕虫病毒，他会自我复制传播感染其他机器，更要命的是他还利用了一个windows平台下的0DAY（[永恒之蓝](https://zh.wikipedia.org/wiki/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D)）漏洞。。。
 
 五月12日晚微博上[山东大学](https://zh.wikipedia.org/wiki/%E5%B1%B1%E4%B8%9C%E5%A4%A7%E5%AD%A6)、[南昌大学](https://zh.wikipedia.org/wiki/%E5%8D%97%E6%98%8C%E5%A4%A7%E5%AD%A6)、[广西师范大学](https://zh.wikipedia.org/wiki/%E5%B9%BF%E8%A5%BF%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6)、[桂林电子科技大学](https://zh.wikipedia.org/wiki/%E6%A1%82%E6%9E%97%E9%9B%BB%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8)、[大连海事大学](https://zh.wikipedia.org/wiki/%E5%A4%A7%E8%BF%9E%E6%B5%B7%E4%BA%8B%E5%A4%A7%E5%AD%A6)、[东北财经大学](https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%8C%97%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6)等十几家高校发布通知，提醒师生注意防范。这个时候就能看出WannaCry这个蠕虫病毒开始搞大新闻了。除了教育网、校园网以外，[新浪微博](https://zh.wikipedia.org/wiki/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A)上不少用户反馈，北京、上海、江苏、天津等多地的出入境、派出所等公安网和政企专网也遭遇了病毒袭击，许多公安机关和政府部门由于勒索软件的影响被迫停止工作。[中国国家互联网应急中心](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83)发布关于防范WannaCry的情况通报，称全球约101.1万个IP地址遭受“永恒之蓝”SMB漏洞攻击工具的攻击尝试，发起攻击尝试的IP地址数量9300余个。重要的是，英国的医院还被感染了。这下感觉彻底没救了，作者公布解密方案都没法挽回了。
@@ -40,7 +42,7 @@ WannaCry会加密硬盘上的所有文件，它还会提示你，如果你想解
 这里用到了不对称加密的一个特性，**用其中一个密钥加密的消息只能被另一个密钥解密**。
 
 实际上WannaCry的加密过程会复杂点，WannaCry会本地生成一对RSA的一对密钥（我一直不明白这是为什么）。WannaCry 会给每个文件都单独生成一个AES的密钥加密后用本地生成的公钥加密，私钥由硬编码在程序里的另一对RSA密钥中的公钥加密（作者在他本地生成的RSA密钥对）实际上WannaCry是硬编码了主公钥，还有一对RSA密钥对，用作演示解密使用。。。（作者真贴心啊）
-{% asset_img 流程.jpg WannaCry加密流程 %}
+![](https://blog-malu.oss-cn-beijing.aliyuncs.com/%E6%B5%81%E7%A8%8B.jpg?x-oss-process=style/blog)
 
 暑假闲着没事，就尝试用java实现RSA密钥对的生成。
 
