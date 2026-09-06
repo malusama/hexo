@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "@fancyapps/fancybox": "3.5.7",
-    "jquery": "3.7.1"
+    "jquery": "4.0.0"
   }
 }
