@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - /
+      - /themes/landscape
+      - /themes/milk/source/css/mobi.css-3.0.4
+    schedule:
+      interval: weekly
+    groups:
+      dependencies:
+        patterns: ['*']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
